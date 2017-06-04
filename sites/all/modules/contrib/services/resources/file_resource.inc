@@ -209,6 +209,7 @@ function _file_resource_create($file) {
  */
 function _file_resource_create_raw() {
   $files = array();
+
   foreach ($_FILES['files']['name'] as $field_name => $file_name) {
     // Sanitize the user-input file name before saving to the file system.
     $_FILES['files']['name'][$field_name] = _services_file_check_name_extension($file_name);

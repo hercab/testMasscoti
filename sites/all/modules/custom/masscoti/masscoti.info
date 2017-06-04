@@ -1,0 +1,11 @@
+name = Masscoti
+description = Custom code for masscoti
+package = MasscotiApp_dev
+core = 7.x
+dependencies[] = services
+
+; Information added by Drupal.org packaging script on 2014-01-02
+version = "7.x-1.0"
+core = "7.x"
+project = "maascotiapp_dev"
+datestamp = "1388643810"

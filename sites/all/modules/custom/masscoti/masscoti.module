@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: yunior
+ * Date: 6/4/2017
+ * Time: 4:13 PM
+ */
+/**
+ * Implements hook_rest_server_request_parsed_alter().
+ */
+function masscoti_rest_server_request_parsed_alter(&$data, $controller) {
+    // If services was requested to log in user
+    if ('_user_resource_login' == $controller['callback']) {
+        // Force the current user to anonymous
+        if (user_is_logged_in()) {
+            global $user;
+            $user = drupal_anonymous_user();
+        }
+    }
+}
